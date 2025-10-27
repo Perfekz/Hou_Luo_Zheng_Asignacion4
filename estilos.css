@@ -1,9 +1,18 @@
-body {
+/*HTML y body ocupenn toda la altura*/
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    display: flex;
+    flex-direction: column;  /*Apila header, main y footer*/
     background-color:#142144;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Contenedor principal del contenido*/
+.pagina {
+    flex: 1; /*Esto hace que el contenido principal crezca para empujar el footer abajo*/
+    width: 100%;          /*Ocupe todo el ancho*/
 }
 
 a {
@@ -30,16 +39,20 @@ header img {
 }
 
 footer {
+    position: fixed; /*Fijo en la pantalla*/
+    bottom: 0; /*Parte inferior*/
+    width: 100%; /*Ocupa todo el ancho*/
     background-color: #70c5ea;        
     padding: 2px;
-    margin: 20px 0 0 0;
+    margin: 0;
     text-align: left;
     font-size: 10px;
+    z-index: 1000; /*Siempre encima de otros elementos*/
 }
 
 footer a {
-    color: rgb(168, 83, 83);           /* fuerza color negro */
-    text-decoration: none;  /* quita subrayado */
+    color: rgb(168, 83, 83);           
+    text-decoration: none; /*quita subrayado*/
 }
 
 /*Formato para el menú de navegación*/
@@ -52,7 +65,7 @@ footer a {
 }
 
 .menuNav a {
-    color: rgb(203, 27, 27);       /* Color de los enlaces */
+    color: rgb(203, 27, 27); /*Color de los enlaces*/
     font-weight: bold;
 }
 
@@ -60,6 +73,7 @@ footer a {
 .formatoNoticia {
     display: flex;
     flex-direction: row;
+    margin-bottom: 100px; /*Aumenta el espacio debajo de la noticia*/ 
 }
 
 /*Formato individual para cada noticia, incluye título, imagen y párrafo*/
