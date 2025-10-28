@@ -64,7 +64,12 @@ footer {
 }
 
 footer a {
-    color: rgb(168, 83, 83); 
+    color: rgb(230, 103, 103);
+    font-size: small;
+}
+
+footer a:hover {
+    color:rgb(255, 255, 255);
 }
 
 /*Formato para el menú de navegación*/
@@ -78,6 +83,10 @@ footer a {
 
 .menuNav a {
     color: rgb(203, 27, 27); /*Color de los enlaces*/
+}
+
+.menuNav a:hover {
+    color: rgb(230, 103, 103);
 }
 
 /*Formato general de las noticias*/
